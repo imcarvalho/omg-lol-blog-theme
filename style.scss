@@ -52,37 +52,15 @@ h4,
 h5,
 h6 {
   font-family: $font-family-titles;
+  font-weight: bold;
   margin: 1rem 0;
+  a {
+    border-bottom: none;
+  }
 }
 
 h1 {
-  font-weight: 600;
   line-height: 1.2;
-
-  a {
-    border-bottom: none;
-  }
-}
-
-h2 {
-  font-weight: 500;
-  font-family: $font-family-titles;
-
-  a {
-    border-bottom: none;
-  }
-}
-
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 400;
-  font-family: $font-family-titles;
-
-  a {
-    border-bottom: none;
-  }
 }
 
 p,
@@ -93,28 +71,10 @@ li {
 a {
   color: $accent;
   text-decoration: none;
-  border-bottom: 1px dotted $text;
 }
 
 header {
   margin-bottom: 16px;
-
-  a {
-    border-bottom: none;
-  }
-
-  .main-header {
-    margin-bottom: 0;
-  }
-
-  #avatar {
-    display: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    margin-right: 16px;
-  }
 
   h1 {
     margin-bottom: 0.2em;
@@ -130,29 +90,14 @@ header {
 article {
   margin: 32px 0 64px 0;
 
-  a {
-    font-weight: bold;
-    header {
-      text-align: center;
-    }
+  h1 {
+    color: $accent;
+    text-transform: uppercase;
   }
 
-  header {
-    h1 {
-      margin-block-end: 0.2em;
-
-      a {
-        color: $accent;
-        text-transform: uppercase;
-        font-size: 0.75em;
-        font-style: normal;
-      }
-    }
-
-    time {
-      color: $text-alt;
-      text-transform: uppercase;
-    }
+  a {
+    border-bottom: 1px dotted $text;
+    font-weight: bold;
   }
 }
 
@@ -162,10 +107,6 @@ main {
 
 footer {
   margin-top: 32px;
-
-  a {
-    border-bottom: none;
-  }
 
   svg {
     width: 32px;
