@@ -1,0 +1,22 @@
+@media (min-width: 800px) {
+  .weblog-title {
+    font-size: 3em;
+  }
+
+  .content {
+    max-width: 750px;
+  }
+
+  header #avatar {
+    display: inline-block;
+  }
+
+  .photos-grid-container {
+    display: grid !important;
+
+    .photos-grid-item {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}

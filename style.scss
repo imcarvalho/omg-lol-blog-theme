@@ -36,7 +36,7 @@ body {
 }
 
 .content {
-  max-width: 80%;
+  max-width: 90%;
   padding: 2em;
   margin: 2em auto;
   border-radius: 1em;
@@ -100,7 +100,7 @@ header {
 }
 
 .weblog-title {
-  font-size: 3em;
+  font-size: 1.8em;
   text-transform: uppercase;
   font-weight: bold;
   padding-bottom: 0px;
@@ -205,11 +205,4 @@ ul {
   display: inline-block;
 }
 
-@media (min-width: 800px) {
-  .content {
-    max-width: 750px;
-  }
-  #avatar {
-    display: inline-block;
-  }
-}
+@import 'media';

@@ -112,7 +112,7 @@ body {
 }
 
 .content {
-  max-width: 80%;
+  max-width: 90%;
   padding: 2em;
   margin: 2em auto;
   border-radius: 1em;
@@ -179,7 +179,7 @@ header h1 a {
 }
 
 .weblog-title {
-  font-size: 3em;
+  font-size: 1.8em;
   text-transform: uppercase;
   font-weight: bold;
   padding-bottom: 0px;
@@ -282,11 +282,21 @@ ul {
 }
 
 @media (min-width: 800px) {
+  .weblog-title {
+    font-size: 3em;
+  }
   .content {
     max-width: 750px;
   }
-  #avatar {
+  header #avatar {
     display: inline-block;
+  }
+  .photos-grid-container {
+    display: grid !important;
+  }
+  .photos-grid-container .photos-grid-item {
+    width: 200px;
+    height: 200px;
   }
 }
 
