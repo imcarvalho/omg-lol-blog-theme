@@ -1,8 +1,10 @@
-@import url("https://static.omg.lol/type/font-honey.css");
 @import url("https://static.omg.lol/type/font-lato-regular.css");
 @import url("https://static.omg.lol/type/font-lato-bold.css");
 @import url("https://static.omg.lol/type/font-lato-italic.css");
 @import url("https://static.omg.lol/type/fontawesome-free/css/all.css");
+@import url("https://static.omg.lol/type/font-mint-grotesk-regular.css");
+@import url("https://static.omg.lol/type/font-mint-grotesk-bold.css");
+@import url("https://static.omg.lol/type/font-mint-grotesk-italic.css");
 @-webkit-keyframes colours {
   0% {
     background: #fecaca;
@@ -101,7 +103,7 @@
 
 html {
   color: rgba(0, 37, 109, 0.9) !important;
-  font-family: "Lato", sans-serif;
+  font-family: "Mint Grotesk", sans-serif;
   line-height: 1.8;
   font-size: 18px;
 }
@@ -127,7 +129,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-weight: bold;
   margin: 1rem 0;
 }
@@ -184,6 +186,22 @@ header h1 a {
   font-weight: bold;
   padding-bottom: 0px;
   color: rgba(1, 0, 109, 0.65);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+nav ul li {
+  margin-left: 12px;
+  font-weight: bold;
+}
+nav ul li a {
+  color: rgba(205, 35, 120, 0.7);
+}
+nav ul li:first-of-type {
+  margin-left: 0;
 }
 
 article {
