@@ -139,6 +139,10 @@ article {
     border-bottom: 1px dotted $text;
     font-weight: bold;
   }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 main {

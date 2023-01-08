@@ -215,6 +215,9 @@ article a {
   border-bottom: 1px dotted rgba(0, 37, 109, 0.9);
   font-weight: bold;
 }
+article p:last-of-type {
+  margin-bottom: 0;
+}
 
 main {
   margin: 32px 0 32px 0;
