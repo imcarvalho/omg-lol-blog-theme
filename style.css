@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://static.omg.lol/type/font-lato-regular.css");
 @import url("https://static.omg.lol/type/font-lato-bold.css");
 @import url("https://static.omg.lol/type/font-lato-italic.css");
@@ -217,6 +218,23 @@ article a {
 }
 article p:last-of-type {
   margin-bottom: 0;
+}
+article ul {
+  width: 80%;
+  margin: 0 auto;
+}
+article ul li {
+  margin-bottom: 16px;
+  display: grid;
+  grid-template-columns: 0 1fr;
+  gap: 1.75em;
+  align-items: start;
+  line-height: 1.25;
+}
+article ul li:before {
+  color: rgba(205, 35, 120, 0.7);
+  content: "↪";
+  font-size: 1.25em;
 }
 
 main {

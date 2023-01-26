@@ -143,6 +143,25 @@ article {
   p:last-of-type {
     margin-bottom: 0;
   }
+
+  ul {
+    width: 80%;
+    margin: 0 auto;
+    li {
+      margin-bottom: 16px;
+      display: grid;
+      grid-template-columns: 0 1fr;
+      gap: 1.75em;
+      align-items: start;
+      line-height: 1.25;
+
+      &:before {
+        color: $text-alt;
+        content: '↪';
+        font-size: 1.25em;
+      }
+    }
+  }
 }
 
 main {
