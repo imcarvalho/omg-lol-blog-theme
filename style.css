@@ -244,8 +244,9 @@ main {
 footer {
   margin-top: 32px;
 }
-footer svg {
+footer img {
   width: 32px;
+  border: none;
 }
 
 hr {
@@ -301,23 +302,27 @@ ul {
   justify-content: space-around;
   font-size: 0.8em;
 }
-
-.post-info {
+.post-info-container .post-info {
   color: rgba(205, 35, 120, 0.7);
   text-transform: uppercase;
   font-weight: bold;
 }
-
-.post-info i:nth-child(2) {
+.post-info-container .post-info i:nth-child(2) {
   margin-left: 0.75em;
 }
-
-.tag {
-  padding: 0.3em 0.4em;
-  margin: 0.8em 0 0 0.4em;
-  border-radius: 0.5em;
+.post-info-container .tag {
+  margin: 0 8px 0 0;
+  border-radius: 5px;
+  padding: 0px 10px;
+  color: rgb(255, 240, 255);
   text-decoration: none;
   display: inline-block;
+}
+.post-info-container .post-tags > a:nth-of-type(odd) {
+  background-color: rgba(205, 35, 120, 0.8);
+}
+.post-info-container .post-tags > a:nth-of-type(even) {
+  background-color: rgba(125, 77, 207, 0.8);
 }
 
 @media (min-width: 800px) {

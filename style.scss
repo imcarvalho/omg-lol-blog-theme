@@ -171,8 +171,9 @@ main {
 footer {
   margin-top: 32px;
 
-  svg {
+  img {
     width: 32px;
+    border: none;
   }
 }
 
@@ -228,24 +229,32 @@ ul {
   margin: 0 auto;
   justify-content: space-around;
   font-size: 0.8em;
-}
 
-.post-info {
-  color: $text-alt;
-  text-transform: uppercase;
-  font-weight: bold;
-}
+  .post-info {
+    color: $text-alt;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 
-.post-info i:nth-child(2) {
-  margin-left: 0.75em;
-}
+  .post-info i:nth-child(2) {
+    margin-left: 0.75em;
+  }
 
-.tag {
-  padding: 0.3em 0.4em;
-  margin: 0.8em 0 0 0.4em;
-  border-radius: 0.5em;
-  text-decoration: none;
-  display: inline-block;
+  .tag {
+    margin: 0 8px 0 0;
+    border-radius: 5px;
+    padding: 0px 10px;
+    color: $tag-pill-foreground;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .post-tags > a:nth-of-type(odd) {
+    background-color: $tag-pill-1st-background;
+  }
+  .post-tags > a:nth-of-type(even) {
+    background-color: $tag-pill-2nd-background;
+  }
 }
 
 @import 'media';
