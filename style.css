@@ -13,7 +13,8 @@ html {
   color: #ff51bf !important;
   font-family: "Mint Grotesk", sans-serif;
   line-height: 1.8;
-  font-size: 18px; }
+  font-size: 18px;
+  height: 100%; }
 
 body {
   background-image: linear-gradient(to bottom, #2a2139 75%, #34294f);
