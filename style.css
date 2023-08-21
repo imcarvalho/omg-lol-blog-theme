@@ -181,8 +181,7 @@ ul {
   justify-content: space-around;
   font-size: 0.8em; }
   .post-info-container .post-info {
-    color: #73f0b8;
-    text-shadow: 0 0 2px #100c0f, 0 0 10px #257c5575, 0 0 35px #21272475;
+    color: #03edf9;
     text-transform: uppercase;
     font-weight: bold; }
   .post-info-container .post-info i:nth-child(2) {
