@@ -6,9 +6,11 @@
 
 html,
 body {
- background-image: $default-background;
- height: 100%;
+ min-height: 100%;
  margin: 0;
+ background-image: $default-background;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
 }
 
 html {

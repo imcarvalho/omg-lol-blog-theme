@@ -11,9 +11,11 @@
 
 html,
 body {
+  min-height: 100%;
+  margin: 0;
   background-image: linear-gradient(to bottom, #211339 75%, #291a4f);
-  height: 100%;
-  margin: 0; }
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
 
 html {
   color: #ff51bf;
