@@ -1,22 +1,23 @@
 @media (min-width: 800px) {
-  .weblog-title {
-    font-size: 3em;
-  }
+ .weblog-title {
+  font-size: 3em;
+ }
 
-  .content {
-    max-width: 750px;
-  }
+ .content {
+  max-width: 950px;
+  padding: 2em;
+ }
 
-  header #avatar {
-    display: inline-block;
-  }
+ header #avatar {
+  display: inline-block;
+ }
 
-  .photos-grid-container {
-    display: grid !important;
+ .photos-grid-container {
+  display: grid !important;
 
-    .photos-grid-item {
-      width: 200px;
-      height: 200px;
-    }
+  .photos-grid-item {
+   width: 200px;
+   height: 200px;
   }
+ }
 }

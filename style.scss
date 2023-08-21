@@ -1,48 +1,26 @@
-$text: rgba(0, 37, 109, 0.9);
-$text-accent: rgba(1, 0, 109, 0.65);
-$icons: rgba(205, 35, 120, 0.7);
-$separator: rgba(1, 26, 59, 0.3);
-$shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
-$background-accent: rgba(255, 255, 255, 0.3);
-
-// To do eventually
-@media (prefers-color-scheme: dark) {
-  :root {
-    $text: rgba(0, 37, 109, 0.9);
-    $text-accent: rgba(1, 0, 109, 0.65);
-    $icons: rgba(205, 35, 120, 0.7);
-    $separator: rgba(1, 26, 59, 0.3);
-    $shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
-    $background-accent: rgba(255, 255, 255, 0.3);
-  }
-}
-
-@import 'fonts', 'animation', 'colors';
+@import 'fonts', 'colors';
 
 * {
-  box-sizing: border-box;
+ box-sizing: border-box;
 }
 
 html {
-  color: $text !important;
-  font-family: $font-family, sans-serif;
-  line-height: 1.8;
-  font-size: 18px;
+ color: $text !important;
+ font-family: $font-family, sans-serif;
+ line-height: 1.8;
+ font-size: 18px;
 }
 
 body {
-  background: $default-background;
-  animation: $animation;
+ background-image: $default-background;
+ height: 100%;
 }
 
 .content {
-  max-width: 90%;
-  padding: 2em;
-  margin: 2em auto;
-  border-radius: 1em;
-  text-align: center;
-  background: $main-content-background;
-  box-shadow: $box-shadow;
+ max-width: 90%;
+ margin: 2em auto;
+ border-radius: 1em;
+ text-align: center;
 }
 
 h1,
@@ -51,210 +29,230 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-family-titles, sans-serif;
-  font-weight: bold;
-  margin: 1rem 0;
-  a {
-    border-bottom: none;
-  }
+ font-family: $font-family-titles, sans-serif;
+ color: $glow-text-foreground;
+ font-weight: bold;
+ margin: 1rem 0;
 }
 
 h1 {
-  line-height: 1.2;
+ line-height: 1.2;
+ text-shadow: $h1-glow;
 }
 
 p,
 li {
-  line-height: 150%;
+ line-height: 150%;
 }
 
 a {
-  color: $accent;
-  text-decoration: none;
+ color: $links;
+ text-shadow: $links-glow;
+ text-decoration: none;
+
+ &:hover {
+  color: $glow-text-foreground;
+  transition: color 0.5s ease-in-out;
+ }
 }
 
 header {
-  margin-bottom: 32px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ margin-bottom: 32px;
+ height: 50px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 
-  h1 {
-    margin: 0;
+ h1 {
+  margin: 0;
 
-    a {
-      font-size: 0.65em;
-      font-style: normal;
-    }
+  a {
+   font-size: 0.65em;
+   font-style: normal;
   }
+ }
 }
 
 #avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: none;
-  margin-right: 16px;
-  display: none;
+ width: 50px;
+ height: 50px;
+ border-radius: 50%;
+ border: none;
+ margin-right: 16px;
+ display: none;
 }
 
 .weblog-title {
-  font-size: 1.8em;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding-bottom: 0px;
-  color: $accent;
+ font-size: 1.8em;
+ text-transform: uppercase;
+ font-weight: bold;
+ padding-bottom: 0px;
+ text-shadow: $title-glow;
 }
 
 nav {
-  ul {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 32px;
+ ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
 
-    li {
-      margin-left: 12px;
-      font-weight: bold;
-      a {
-        color: $text-alt;
-      }
+  li {
+   margin-left: 12px;
+   font-weight: bold;
+   a {
+    color: $navigation;
+    text-shadow: $title-glow;
+   }
 
-      &:first-of-type {
-        margin-left: 0;
-      }
-    }
+   &:first-of-type {
+    margin-left: 0;
+   }
   }
+ }
+}
+
+.header-container {
+ display: flex;
+ align-items: center;
 }
 
 article {
-  margin: 32px 0 32px 0;
+ margin: 32px 0 32px 0;
 
-  h1 {
-    color: $accent;
-    text-transform: uppercase;
+ h1 {
+  text-transform: uppercase;
+ }
+
+ a {
+  font-weight: bold;
+ }
+
+ p:last-of-type {
+  margin-bottom: 0;
+ }
+
+ ul {
+  width: 80%;
+  margin: 0 auto;
+  li {
+   margin-bottom: 16px;
+   display: grid;
+   grid-template-columns: 0 1fr;
+   gap: 1.75em;
+   align-items: start;
+   line-height: 1.25;
+
+   &:before {
+    color: $links;
+    text-shadow: $links-glow;
+    content: '↪';
+    font-size: 1.25em;
+   }
   }
-
-  a {
-    border-bottom: 1px dotted $text;
-    font-weight: bold;
-  }
-
-  p:last-of-type {
-    margin-bottom: 0;
-  }
-
-  ul {
-    width: 80%;
-    margin: 0 auto;
-    li {
-      margin-bottom: 16px;
-      display: grid;
-      grid-template-columns: 0 1fr;
-      gap: 1.75em;
-      align-items: start;
-      line-height: 1.25;
-
-      &:before {
-        color: $text-alt;
-        content: '↪';
-        font-size: 1.25em;
-      }
-    }
-  }
+ }
 }
 
 main {
-  margin: 32px 0 32px 0;
+ margin: 32px 0 32px 0;
 }
 
 footer {
-  margin-top: 32px;
+ margin-top: 32px;
 
-  img {
-    width: 32px;
-    border: none;
-  }
+ img {
+  width: 32px;
+  border: none;
+ }
 }
 
 hr {
-  border: 1px dashed $background-alt;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
+ border: 1px dashed $border-foreground;
+ box-shadow: $border-glow;
+ overflow: hidden;
+ margin-left: auto;
+ margin-right: auto;
 }
 
 blockquote {
-  border-left: 4px solid $background-alt;
-  padding-left: 1em;
-  margin-left: 1em;
+ border-left: 4px solid $border-foreground;
+ box-shadow: $border-glow;
+ padding-left: 1em;
+ margin-left: 1em;
 }
 
 code {
-  color: $tag-pill-foreground;
-  background-color: $accent;
-  padding: 3px;
-  border-radius: 0.4em;
-  font-size: 16px;
+ color: $tag-pill-foreground;
+ background-color: $accent;
+ padding: 3px;
+ border-radius: 0.4em;
+ font-size: 16px;
 }
 
 pre {
-  background-color: $accent;
-  border-radius: 0.4em;
-  code {
-    background-color: inherit;
-  }
+ background-color: $accent;
+ border-radius: 0.4em;
+ code {
+  background-color: inherit;
+ }
 }
 
 img,
 video,
 iframe {
-  max-width: 100%;
-  height: auto;
-  border: 8px solid $background-alt;
-  border-radius: 8px;
-  display: flex;
-  margin: 0 auto;
+ max-width: 100%;
+ height: auto;
+ border: 8px solid $border-foreground;
+ border-radius: 8px;
+ display: flex;
+ margin: 0 auto;
 }
 
 ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+ list-style: none;
+ padding: 0;
+ margin: 0;
 }
 
 .post-info-container {
-  display: flex;
-  width: 80%;
-  margin: 0 auto;
-  justify-content: space-around;
-  font-size: 0.8em;
+ display: flex;
+ width: 80%;
+ margin: 0 auto;
+ justify-content: space-around;
+ font-size: 0.8em;
 
-  .post-info {
-    color: $text-alt;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
+ .post-info {
+  color: $links;
+  text-shadow: $links-glow;
+  text-transform: uppercase;
+  font-weight: bold;
+ }
 
-  .post-info i:nth-child(2) {
-    margin-left: 0.75em;
-  }
+ .post-info i:nth-child(2) {
+  margin-left: 0.75em;
+ }
 
-  .tag {
-    margin: 0 8px 0 0;
-    border-radius: 5px;
-    padding: 0px 10px;
-    color: $tag-pill-foreground;
-    text-decoration: none;
-    display: inline-block;
-  }
+ .tag {
+  margin: 0 8px 0 0;
+  border-radius: 5px;
+  padding: 0px 10px;
+  color: $tag-pill-foreground;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+ }
 
-  .post-tags > a:nth-of-type(odd) {
-    background-color: $tag-pill-1st-background;
-  }
-  .post-tags > a:nth-of-type(even) {
-    background-color: $tag-pill-2nd-background;
-  }
+ .post-tags > a:nth-of-type(odd) {
+  background-color: $tag-pill-1st-background;
+ }
+ .post-tags > a:nth-of-type(even) {
+  background-color: $tag-pill-2nd-background;
+ }
+}
+
+iframe {
+ height: 400px;
+ width: 100%;
+ margin: 24px auto;
 }
 
 @import 'media';

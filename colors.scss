@@ -1,12 +1,21 @@
-$default-background: rgba(221, 214, 254);
-$background-alt: rgba(0, 0, 0, 0.1);
-$main-content-background: rgba(255, 255, 255, 0.5);
-$text: rgba(0, 37, 109, 0.9);
-$text-alt: rgba(205, 35, 120, 0.7);
-$accent: rgba(1, 0, 109, 0.65);
-$accent-alt: rgba(57, 0, 90);
-$box-shadow: 0 0 transparent, 0 0 transparent, 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-  0 2px 4px -1px rgba(0, 0, 0, 0.06);
-$tag-pill-foreground: rgba(355, 240, 255, 1);
-$tag-pill-1st-background: rgba(205, 35, 120, 0.8);
-$tag-pill-2nd-background: rgba(125, 77, 207, 0.8);
+$text: #ff51bf;
+$accent: #37334e;
+$navigation: #ff8b38;
+
+// background subtle gradient
+$default-background: linear-gradient(to bottom, #2a2139 75%, #34294f);
+
+// glowing text
+$glow-text-foreground: #fdfdfd;
+$title-glow: 0 0 2px #393a33, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
+$h1-glow: 0 0 2px #001716, 0 0 3px #03edf975, 0 0 5px #03edf975,
+ 0 0 8px #03edf975;
+$border-foreground: #f92aad;
+$border-glow: 0 0 2px #100c0f, 0 0 5px #dc078e33, 0 0 10px #fff3;
+$links: #73f0b8;
+$links-glow: 0 0 2px #100c0f, 0 0 10px #257c5575, 0 0 35px #21272475;
+
+// tag pills
+$tag-pill-foreground: #ffffff;
+$tag-pill-1st-background: #03edf995;
+$tag-pill-2nd-background: #f97e7295;
