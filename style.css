@@ -9,16 +9,17 @@
 * {
   box-sizing: border-box; }
 
+html,
+body {
+  background-image: linear-gradient(to bottom, #211339 75%, #291a4f);
+  height: 100%;
+  margin: 0; }
+
 html {
-  color: #ff51bf !important;
+  color: #ff51bf;
   font-family: "Mint Grotesk", sans-serif;
   line-height: 1.8;
-  font-size: 18px;
-  height: 100%; }
-
-body {
-  background-image: linear-gradient(to bottom, #2a2139 75%, #34294f);
-  height: 100%; }
+  font-size: 18px; }
 
 .content {
   max-width: 90%;
